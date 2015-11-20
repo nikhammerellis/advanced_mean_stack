@@ -1,0 +1,20 @@
+{
+  "name": "mean",
+  "version": "0.0.3",
+  "dependencies": {
+    "express": "latest",
+    "morgan": "latest",
+    "compression": "latest",
+    "body-parser": "latest",
+    "method-override": "latest",
+    "express-session": "latest",
+    "ejs": "latest",
+    "connect-flash": "latest",
+    "mongoose": "latest",
+    "passport": "latest",
+    "passport-local": "latest",
+    "passport-facebook": "latest",
+    "passport-twitter": "latest",
+    "passport-google-oauth": "latest"
+  }
+}
