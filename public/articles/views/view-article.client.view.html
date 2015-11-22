@@ -1,0 +1,16 @@
+<section data-ng-controller="ArticlesController" data-ng-init="findOne()"><!-- runs the findOne method when the view loads -->
+	<h1 data-ng-bind="article.title"></h1>
+
+	<div data-ng-show="authentication.user._id == article.creator._id"><!-- only shows these controls to the creator of the article -->
+		<a href="/#!/articles/{{article._id}}/edit">Edit</a>
+		<a href="#" data-ng-click="delete()">Delete </a>
+	</div>
+
+	<small>
+		<em>Posted on</em>
+		<em data-ng-bind="article.created | date:'mediumDate'"></em>
+		<em>by</em>
+		<em data-ng-bind="article.creator.fullName"></em>
+	</small>
+	<p data-ng-bind="article.content"></p>
+</section>

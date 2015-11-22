@@ -107,7 +107,15 @@ exports.saveOAuthUserProfile = function (req, profile, done) {
 	});
 };
 
-
+// the requiresLogin middleware uses the Passport initiated req.isAuthenticated method to check whether a user is currently authenticated
+exports.requiresLogin = function(req, res, next){
+	if(!req.isAuthenticated()){
+		return res.status(401).send({
+			message: 'User is not logged in'
+		});
+	}
+	next();
+};
 
 
 

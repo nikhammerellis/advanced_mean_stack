@@ -4,16 +4,6 @@
 	<title><%= title %></title>
 </head>
 <body>
-	<% if(user) { %>
-
-	<a href="/signout">Sign out</a>
-
-	<% } else { %>
-
-	<a href="/signup">Sign up</a>
-	<a href="/signin">Sign in</a>
-
-	<% } %>
 
 	<section ng-view></section>
 
@@ -24,11 +14,22 @@
 
 	<script type="text/javascript" src="/lib/angular/angular.js"></script>
 	<script type="text/javascript" src="/lib/angular-route/angular-route.js"></script>
+	<script type="text/javascript" src="/lib/angular-resource/angular-resource.js"></script>
+
+	<script type="text/javascript" src="/articles/articles.client.module.js"></script>
+	<script type="text/javascript" src="/articles/controllers/articles.client.controller.js"></script>
+	<script type="text/javascript" src="/articles/services/articles.client.service.js"></script>
+	<script type="text/javascript" src="/articles/config/articles.client.routes.js"></script>
+
+
 	<script type="text/javascript" src="/example/example.client.module.js"></script>
 	<script type="text/javascript" src="/example/controllers/example.client.controller.js"></script>
 	<script type="text/javascript" src="/example/config/example.client.routes.js"></script>
+
 	<script type="text/javascript" src="/users/users.client.module.js"></script>
 	<script type="text/javascript" src="/users/services/authentication.client.service.js"></script>
+
+	<!-- Bootstrap AngularJS Application -->
 	<script type="text/javascript" src="/app.js"></script>
 </body>
 </html>

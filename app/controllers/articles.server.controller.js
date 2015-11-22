@@ -95,3 +95,14 @@ exports.delete = function(req, res){
 		}
 	});
 };
+
+// hasAuthorization middleware is using the req.article and req.user objects to verify that the current user is the creator of the current article
+// assumes that it gets executed only for requests containing the articleId route parameter 
+exports.hasAuthorization = function(req, res, next){
+	if(req.article.creator.id !== req.user.id){
+		return res.status(403).send({
+			message: 'User is not authorized'
+		});
+	}
+	next();
+};
